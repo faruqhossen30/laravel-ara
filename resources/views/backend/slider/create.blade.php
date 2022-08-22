@@ -15,7 +15,8 @@
             @csrf
             <div class="card">
                 <div class="card-body">
-                    <h6 class="card-title">Image</h6>
+                    <h6 class="card-title">Slider Image</h6>
+                    <span class="text-muted my-1">Image size must be 375x668</span>
                     <input type="file" id="myDropify" name="thumbnail">
                 </div>
             </div>

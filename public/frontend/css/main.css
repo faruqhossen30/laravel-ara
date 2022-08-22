@@ -3,7 +3,7 @@
 /*  ==========================================================================
     Table of contents
     ==========================================================================
-    
+
     1.0 Common Styles
     2.0 Header Section
     3.0 Hero Section
@@ -19,13 +19,14 @@
     13.0 Subscribe Section
     14.0 Footer Section
     15.0 scroll To Top
-    
+    15.0 Package page
+
     ==========================================================================
     Xoom App Landing Page Version 0.1
     ========================================================================== */
 
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,600,700,800');
-	
+
 /*  ==========================================================================
     Common Styles
     ========================================================================== */
@@ -112,17 +113,17 @@ textarea::-webkit-input-placeholder{
 
 input:-moz-placeholder,
 textarea:-moz-placeholder{ /* Firefox 18- */
-   color: #ddd !important;  
+   color: #ddd !important;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder{  /* Firefox 19+ */
-   color: #ddd !important;  
+   color: #ddd !important;
 }
 
 input:-ms-input-placeholder,
-textarea:-ms-input-placeholder{  
-   color: #ddd !important;  
+textarea:-ms-input-placeholder{
+   color: #ddd !important;
 }
 button{
     border: none;
@@ -457,7 +458,7 @@ ul.nav > li > a.active{
     margin: 17px 5px 19px;
 }
 .slicknav_nav .slicknav_row:hover,
-.slicknav_nav .slicknav_row, 
+.slicknav_nav .slicknav_row,
 .slicknav_nav a,
 .slicknav_nav a:hover{
     -moz-border-radius: 0;
@@ -465,7 +466,7 @@ ul.nav > li > a.active{
     -o-border-radius: 0;
     border-radius: 0;
 }
-.slicknav_nav .slicknav_row, 
+.slicknav_nav .slicknav_row,
 .slicknav_nav a {
     padding: 10px 15px;
     margin: 0;
@@ -761,7 +762,7 @@ ul.nav > li > a.active{
     left: calc(50% - 8px);
     top: -8px;
     transform: rotate(45deg);
-    
+
 }
 .testimonial_item h4{
     font-size: 14px;
@@ -984,7 +985,7 @@ ul.nav > li > a.active{
     margin: 0 5px;
 }
 .social_link li a{
-    background: #fff; 
+    background: #fff;
     display: inline-block;
     font-size: 14px;
     color: #FEB692;
@@ -1010,7 +1011,7 @@ ul.nav > li > a.active{
     text-transform: uppercase;
     font-size: 12px;
     margin: 0;
-}  
+}
 
 /* ==========================================================================
    Scroll To Top
@@ -1033,4 +1034,11 @@ ul.nav > li > a.active{
 #scroll-to-top:hover{
     background-color: #282828;
     color: #fff;
+}
+
+/* ==========================================================================
+   Package page
+   ========================================================================== */
+#package-section{
+    margin-top: 90px;
 }

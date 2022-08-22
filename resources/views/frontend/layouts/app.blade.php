@@ -54,14 +54,14 @@
         <header id="header" class="header_section">
             <div class="container">
                 <nav class="navbar">
-                    <a href="#" class="navbar-brand"><img src="{{asset('frontend')}}/img/logo.png" alt="Xoom"></a>
+                    <a href="{{route('homepage')}}" class="navbar-brand"><img src="{{asset('frontend')}}/img/logo.png" alt="Xoom"></a>
                     <div class="d-flex menu-wrap">
                        <div id="navmenu" class="mainmenu">
                            <ul class="nav">
-                                <li><a data-scroll class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a></li>
+                                <li><a data-scroll class="nav-link active" href="{{route('homepage')}}">Home <span class="sr-only">(current)</span></a></li>
                                 <li><a data-scroll class="nav-link" href="#about">About</a></li>
+                                <li><a data-scroll class="nav-link" href="{{route('packagepage')}}">Package</a></li>
                                 <li><a data-scroll class="nav-link" href="#features">Features</a></li>
-                                <li><a data-scroll class="nav-link" href="#screenshots">Screenshots</a></li>
                                 <li><a data-scroll class="nav-link" href="#pricing">Pricing</a></li>
                                 <li><a data-scroll class="nav-link" href="#testimonial">Reviews</a></li>
                                 <li><a data-scroll class="nav-link" href="#blog">Blog</a></li>
@@ -79,7 +79,7 @@
         @yield('content')
 
 		<!-- Footer Section -->
-        @include('backend.layout.footer')
+        @include('frontend.layouts.footer')
 
 		<a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
 

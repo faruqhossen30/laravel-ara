@@ -112,27 +112,12 @@
                   <div class="screen_wrap">
                     <div class="swiper-container screen_carousel">
                         <div class="swiper-wrapper">
+                            @foreach ($sliders as $slider)
                             <div class="swiper-slide">
-                                <img src="{{asset('frontend')}}/img/screenshot-1.jpg" alt="App Screen">
+                                <img src="{{asset('storage/slider/'.$slider->thumbnail)}}" alt="App Screen">
                             </div>
-                            <div class="swiper-slide">
-                                <img src="{{asset('frontend')}}/img/screenshot-2.jpg" alt="App Screen">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{asset('frontend')}}/img/screenshot-3.jpg" alt="App Screen">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{asset('frontend')}}/img/screenshot-4.jpg" alt="App Screen">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{asset('frontend')}}/img/screenshot-5.jpg" alt="App Screen">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{asset('frontend')}}/img/screenshot-6.jpg" alt="App Screen">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{asset('frontend')}}/img/screenshot-7.jpg" alt="App Screen">
-                            </div>
+                            @endforeach
+
                         </div>
                         <!-- pagination -->
                         <div class="screen-pagination"></div>
@@ -146,7 +131,7 @@
 <section id="pricing" class="pricing_section bg-grey padding">
     <div class="container">
         <div class="section_heading mb-40 align-center">
-            <h2>Xoom Pricing</h2>
+            <h2>Popular Package</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> It has survived not only five centuries.</p>
         </div><!-- Section Heading -->
         <div class="row pricing_list">
@@ -204,6 +189,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="text-center pt-4">
+            <a href="#" class="button_1 button_2">All Package</a>
         </div>
     </div>
 </section><!-- Pricing Section -->

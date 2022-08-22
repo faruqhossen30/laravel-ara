@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\PackagepageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomepageController::class, 'index'])->name('homepage');
+Route::get('/packages', [PackagepageController::class, 'index'])->name('packagepage');
+Route::get('/package/{id}', [PackagepageController::class, 'singlePackage'])->name('singlepackage');
 
 
 

@@ -12,6 +12,6 @@ class Package extends Model
 
     public function services()
     {
-        $this->hasMany(PackageService::class,'package_id');
+        return $this->hasMany(PackageService::class, 'package_id', 'id');
     }
 }
