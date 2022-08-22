@@ -1,4 +1,7 @@
 <?php
+
+use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\CategoryController;
 use Illuminate\Support\Facades\Route;
 // Dashboard Start
 Auth::routes();
@@ -7,6 +10,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', function () {
         return view('backend.dashboard');
     })->name('dashboard');
+
+    Route::resource('blog', BlogController::class);
+    Route::resource('category', CategoryController::class);
 
     Route::group(['prefix' => 'email'], function () {
         Route::get('inbox', function () {
