@@ -39,6 +39,24 @@
       </ul>
     </div>
   </li>
+
+<li class="nav-item {{ active_class(['package/*']) }}">
+    <a class="nav-link" data-bs-toggle="collapse" href="#packageAttributes" role="button" aria-expanded="{{ is_active_route(['email/*']) }}" aria-controls="email">
+      <i class="link-icon" data-feather="mail"></i>
+      <span class="link-title">Package </span>
+      <i class="link-arrow" data-feather="chevron-down"></i>
+    </a>
+    <div class="collapse {{ show_class(['package/*']) }}" id="packageAttributes">
+      <ul class="nav sub-menu">
+        <li class="nav-item">
+          <a href="{{ route('package.index') }}" class="nav-link {{ active_class(['email/inbox']) }}">All Package</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('day.index') }}" class="nav-link {{ active_class(['email/inbox']) }}">Day</a>
+        </li>
+      </ul>
+    </div>
+  </li>
 {{-- Blog atrribute end --}}
       <li class="nav-item nav-category">web apps</li>
       <li class="nav-item {{ active_class(['email/*']) }}">

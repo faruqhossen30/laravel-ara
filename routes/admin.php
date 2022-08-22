@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\PackageController;
+use App\Http\Controllers\PackagedayController;
+use App\Models\PackageDay;
 use Illuminate\Support\Facades\Route;
 // Dashboard Start
 Auth::routes();
@@ -13,6 +16,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('blog', BlogController::class);
     Route::resource('category', CategoryController::class);
+    Route::resource('day', PackagedayController::class);
+    Route::resource('package', PackageController::class);
 
     Route::group(['prefix' => 'email'], function () {
         Route::get('inbox', function () {
