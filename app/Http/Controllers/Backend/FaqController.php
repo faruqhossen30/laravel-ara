@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Slider;
+use App\Models\Faq;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 
-class SliderController extends Controller
+class FaqController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +18,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::get();
-        return view('backend.slider.index', compact('sliders'));
+        $faqs = Faq::get();
+        return view('backend.faq.index', compact('faqs'));
     }
 
     /**
@@ -29,7 +29,8 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return  view('backend.slider.create');
+        $faqs = Faq::get();
+        return view('backend.faq.create',compact('faqs'));
     }
 
     /**
@@ -40,29 +41,14 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-
-        $request->validate([
-            'thumbnail' => 'required'
-        ]);
-
-        if ($request->file('thumbnail')) {
-            $extention = $request->file('thumbnail')->getClientOriginalExtension();
-            $uniquename = uniqid().'.'.$extention;
-
-            $request->file('thumbnail')->storeAs(
-                'public/slider',
-                $uniquename
-            );
-            $thumbnailname = $uniquename;
-
-            Slider::create([
-                'user_id'=> Auth::user()->id,
-                'thumbnail'=> $thumbnailname
-            ]);
-            Session::flash('create');
-
-            return redirect()->route('slider.index');
-        }
+        $data = [
+            'title' => $request->title,
+            'description' => $request->description,
+            'user_id' => Auth::user()->id
+        ];
+        Faq::create($data);
+        Session::flash('create');
+        return redirect()->route('faq.index');
     }
 
     /**
@@ -73,7 +59,8 @@ class SliderController extends Controller
      */
     public function show($id)
     {
-        //
+        $faq = Faq::firstWhere('id',$id);
+        return view('backend.faq.show', compact('faq'));
     }
 
     /**
@@ -84,7 +71,9 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $faq = Faq::firstWhere('id',$id);
+
+        return view('backend.faq.edit', compact('faq'));
     }
 
     /**
@@ -96,7 +85,20 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        $data = [
+            'title' => $request->title,
+            'description' => $request->description,
+            'user_id' => Auth::user()->id,
+        ];
+
+        Faq::firstwhere('id', $id)->update($data);
+        Session::flash('update');
+        return redirect()->route('faq.index');
     }
 
     /**
@@ -107,12 +109,8 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        Slider::where('id', $id)->delete();
+        Faq::firstwhere('id', $id)->delete();
         Session::flash('delete');
-        return redirect()->route('slider.index');
-
-        // Blog::firstwhere('id', $id)->delete();
-        // Session::flash('delete');
-        // return redirect()->route('blog.index');
+        return redirect()->route('faq.index');
     }
 }

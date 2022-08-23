@@ -2,7 +2,7 @@
 @section('content')
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Slider</a></li>
+        <li class="breadcrumb-item"><a href="#">Faq</a></li>
         <li class="breadcrumb-item active" aria-current="page">List</li>
     </ol>
 </nav>
@@ -11,7 +11,7 @@
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <a href="{{route('slider.create')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
+                <a href="{{route('faq.create')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
                     <i class="btn-icon-prepend" data-feather="plus-circle"></i>
                     Create
                 </a>
@@ -23,7 +23,7 @@
                                     #
                                 </th>
                                 <th>
-                                    Photo
+                                    Name
                                 </th>
                                 <th>
                                     Author
@@ -37,35 +37,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($sliders as $slider)
+                            @foreach ($faqs as $faq)
                             <tr>
                                 <td>
                                     1
                                 </td>
                                 <td>
-                                    <img src="{{asset('storage/slider/'.$slider->thumbnail)}}" alt="">
-                                    {{$slider->Photo}}
+                                    {{$faq->title}}
                                 </td>
                                 <td>
-                                    {{$slider->user_id}}
+                                    {{$faq->user_id}}
                                 </td>
                                 <td>
-                                    {{$slider->created_at->format('d M Y')}}
+                                    {{$faq->created_at->format('d M Y')}}
                                 </td>
                                 <td>
-                                    <form action="{{route('slider.destroy', $slider->id)}}" method="post" style="display: inline">
+                                    <form action="{{route('faq.destroy', $faq->id)}}" method="post" style="display: inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" onclick="return confirm('Sure ! Delete slider ?')" class="btn btn-danger btn-xs btn-icon">
+                                        <button type="submit" onclick="return confirm('Sure ! Delete faq ?')" class="btn btn-danger btn-xs btn-icon">
                                             <i data-feather="trash"></i>
                                         </button>
                                     </form>
-                                    {{-- <a href="{{route('slider.edit', $slider->id)}}" type="button" class="btn btn-warning btn-xs btn-icon">
+                                    <a href="{{route('faq.edit', $faq->id)}}" type="button" class="btn btn-warning btn-xs btn-icon">
                                         <i data-feather="check-square"></i>
                                     </a>
-                                    <a href="{{route('slider.show', $slider->id)}}" type="button" class="btn btn-success btn-xs btn-icon">
+                                    <a href="{{route('faq.show', $faq->id)}}" type="button" class="btn btn-success btn-xs btn-icon">
                                         <i data-feather="eye"></i>
-                                    </a> --}}
+                                    </a>
 
                                 </td>
                             </tr>
@@ -110,7 +109,7 @@
     })
     Toast.fire({
         icon: 'success'
-        , title: 'slider has been created!'
+        , title: 'faq has been created!'
     })
 
 </script>
@@ -130,7 +129,7 @@
     })
     Toast.fire({
         icon: 'success'
-        , title: 'Category has been updated !'
+        , title: 'faq has been updated !'
     })
 
 </script>
@@ -150,7 +149,7 @@
     })
     Toast.fire({
         icon: 'warning'
-        , title: 'Slider has been deleted !'
+        , title: 'faq has been deleted !'
     })
 
 </script>

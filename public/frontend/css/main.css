@@ -1040,5 +1040,34 @@ ul.nav > li > a.active{
    Package page
    ========================================================================== */
 #package-section{
-    margin-top: 90px;
+    /* margin-top: 90px; */
 }
+
+
+/* custom css start */
+
+#singepackageSection{
+    margin-top: 100px;
+}
+.pricing_tbl{
+    margin-top: 45px;
+}
+.compare-header{
+    font-size: 40px;
+    margin-bottom: 15px;
+
+
+}
+
+@media only screen and (max-width: 766px) {
+    #singepackageSection{
+        margin-top: 30px;
+    }
+  }
+@media only screen and (max-width: 766px) {
+    .pricing_tbl{
+        margin-top: 0px;
+    }
+  }
+
+  /* custom css end  */

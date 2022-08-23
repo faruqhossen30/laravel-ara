@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\FaqController;
 use App\Http\Controllers\Backend\PackageController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\PackagedayController;
@@ -20,6 +21,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('day', PackagedayController::class);
     Route::resource('package', PackageController::class);
     Route::resource('slider', SliderController::class);
+    Route::resource('faq', FaqController::class);
 
     Route::group(['prefix' => 'email'], function () {
         Route::get('inbox', function () {

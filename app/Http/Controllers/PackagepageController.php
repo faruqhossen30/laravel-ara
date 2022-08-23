@@ -18,6 +18,6 @@ class PackagepageController extends Controller
 
     public function singlePackage(Request $request)
     {
-        return "single package";
+        return view('frontend.single-package');
     }
 }

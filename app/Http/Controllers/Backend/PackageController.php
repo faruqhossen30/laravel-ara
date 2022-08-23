@@ -7,7 +7,7 @@ use App\Models\Package;
 use App\Models\PackageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Session;
 class PackageController extends Controller
 {
     /**
