@@ -58,13 +58,11 @@
     <header id="header" class="header_section">
         <div class="container">
             <nav class="navbar">
-                <a href="{{ route('homepage') }}" class="navbar-brand"><img src="{{ asset('frontend') }}/img/logo.png"
-                        alt="Xoom"></a>
+                <a href="{{ route('homepage') }}" class="navbar-brand"><img src="{{ asset('frontend') }}/img/logo.png" alt="Xoom"></a>
                 <div class="d-flex menu-wrap">
                     <div id="navmenu" class="mainmenu">
                         <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="{{ route('homepage') }}">Home <span
-                                        class="sr-only">(current)</span></a></li>
+                            <li><a data-scroll class="nav-link active" href="{{ route('homepage') }}">Home <span class="sr-only">(current)</span></a></li>
                             <li><a data-scroll class="nav-link" href="#about">About</a></li>
                             <li><a data-scroll class="nav-link" href="{{ route('packagepage') }}">Package</a></li>
                             <li><a data-scroll class="nav-link" href="#features">Features</a></li>
@@ -74,36 +72,35 @@
                             @auth
                             <li class="nav-item ">
                                 <a href="">
-                                    <img src="https://image.shutterstock.com/image-photo/concept-words-live-demo-on-260nw-1855958839.jpg"
-                                        height="35px" width="35px" class="rounded-circle" alt="">
+                                    <img src="https://image.shutterstock.com/image-photo/concept-words-live-demo-on-260nw-1855958839.jpg" height="35px" width="35px" class="rounded-circle" alt="">
                                 </a>
                             </li>
                             <li class="dropdown show nav-item ">
-                                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="{{route('dashboard')}}">Dashboard</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <i class="me-2 icon-md" data-feather="log-out"></i>
+                                        <span>Log Out</span>
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                                 </div>
                             </li>
                             @endauth
-
-                            <li>
-                                <a href="#" class="button_1 button_2">Download Now</a>
-                            </li>
-
-
-
-
                         </ul>
                     </div>
-                    {{-- <div class="menu-btn">
-                            <a href="#download" class="button_1 button_2">Download</a>
-                        </div> --}}
+                    @guest
+                    <div class="menu-btn">
+                        <a href="{{route('login')}}" class="button_1 button_2">Login</a>
+                    </div>
+                    @endguest
                 </div>
             </nav>
         </div>
