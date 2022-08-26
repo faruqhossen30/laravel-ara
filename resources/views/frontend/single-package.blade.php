@@ -11,21 +11,17 @@
                         <div class="pricing_head ">
                             {{-- <h4>{{$package->name}}</h4>
                         <h3>${{$package->price}}</h3> --}}
-                            <h4>daily pack</h4>
-                            <h3>$22</h3>
+                            <h4>{{$package->name}}</h4>
+                            <h3>${{$package->price}}</h3>
                             <h5>7/24 Support</h5>
                         </div>
                         <ul>
-                            {{-- @foreach ($package->services as $service)
+                            @foreach ($package->services as $service)
                             <li>{{$service->service}}</li>
-
-                        @endforeach --}}
-                            <li>office plane</li>
-                            <li>singel plane</li>
-                            <li>mega plane</li>
+                        @endforeach
                         </ul>
                         <div class="pricing_footer">
-                            <a href="" class="button_1 price_btn">Get Started</a>
+                            <a href="" class="button_1 price_btn">Order Now !</a>
                             {{-- {{route('singlepackage', $package->id)}} --}}
                         </div>
                     </div>

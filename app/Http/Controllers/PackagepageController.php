@@ -16,8 +16,9 @@ class PackagepageController extends Controller
         return view('frontend.package-page', compact('packages'));
     }
 
-    public function singlePackage(Request $request)
+    public function singlePackage(Request $request, $id)
     {
-        return view('frontend.single-package');
+        $package = Package::with('services')->firstWhere('id', $id);
+        return view('frontend.single-package', compact('package'));
     }
 }

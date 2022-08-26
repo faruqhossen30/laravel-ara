@@ -38,9 +38,9 @@
                         <h3>${{$package->price}}</h3>
                         <h5>7/24 Support</h5>
                     </div>
-                    <ul>
+                    <ul class="text-left px-4">
                         @foreach ($package->services as $service)
-                            <li>{{$service->service}}</li>
+                            <li class="border-bottom">{{$service->service}}</li>
                         @endforeach
                     </ul>
                     <div class="pricing_footer">

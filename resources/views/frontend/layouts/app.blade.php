@@ -68,7 +68,7 @@
                             <li><a data-scroll class="nav-link" href="#features">Features</a></li>
                             <li><a data-scroll class="nav-link" href="#pricing">Pricing</a></li>
                             <li><a data-scroll class="nav-link" href="#testimonial">Reviews</a></li>
-                            <li><a data-scroll class="nav-link" href="#blog">Blog</a></li>
+                            <li><a data-scroll class="nav-link" href="{{route('blogpage')}}">Blog</a></li>
                             @auth
                             <li class="nav-item ">
                                 <a href="">
