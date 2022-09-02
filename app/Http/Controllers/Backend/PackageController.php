@@ -46,7 +46,7 @@ class PackageController extends Controller
         $package = Package::create([
             'user_id'=> Auth::user()->id,
             'name'   => $request->name,
-            'day_id' => $request->day_id,
+            'day' => $request->day,
             'type'   => $request->type,
             'price'   => $request->price
         ]);
@@ -106,7 +106,7 @@ class PackageController extends Controller
 
         $package = Package::firstWhere('id', $id)->update([
             'name'   => $request->name,
-            'day_id' => $request->day_id,
+            'day' => $request->day,
             'type'   => $request->type,
             'price'   => $request->price,
         ]);

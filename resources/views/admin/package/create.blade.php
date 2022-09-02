@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="mb-3 col-md-6">
                             <label class="form-label">Day</label>
-                            <select name="day_id" class="form-select form-select-sm mb-3">
+                            <select name="day" class="form-select form-select-sm mb-3">
                                 <option selected>Select day</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>

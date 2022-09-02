@@ -18,7 +18,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('blog', BlogController::class);
     Route::resource('category', CategoryController::class);
-    Route::resource('day', PackagedayController::class);
     Route::resource('package', PackageController::class);
     Route::resource('slider', SliderController::class);
     Route::resource('faq', FaqController::class);

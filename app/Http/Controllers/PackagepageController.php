@@ -11,7 +11,19 @@ class PackagepageController extends Controller
 {
     public function index()
     {
-        $packages = Package::with('services')->paginate(15);
+        $day = null;
+        if(isset($_GET['day'])){
+            $day = $_GET['day'];
+        }
+
+        $type = null;
+        if(isset($_GET['type'])){
+            $type = $_GET['type'];
+        }
+
+
+        $packages = Package::with('services')
+            ->paginate(15);
         // return $packages;
         return view('frontend.package-page', compact('packages'));
     }

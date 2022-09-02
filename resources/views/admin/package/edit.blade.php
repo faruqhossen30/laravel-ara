@@ -20,11 +20,11 @@
                     <div class="row">
                         <div class="mb-3 col-md-6">
                             <label class="form-label">Day</label>
-                            <select name="day_id" class="form-select form-select-sm mb-3">
+                            <select name="day" class="form-select form-select-sm mb-3">
                                 <option selected>Select day</option>
-                                <option value="1" @if($package->day_id == 1) selected @endif>One</option>
-                                <option value="2" @if($package->day_id == 2) selected @endif>Two</option>
-                                <option value="3" @if($package->day_id == 3) selected @endif>Three</option>
+                                <option value="1" @if($package->day == 1) selected @endif>One</option>
+                                <option value="2" @if($package->day == 2) selected @endif>Two</option>
+                                <option value="3" @if($package->day == 3) selected @endif>Three</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-6">
