@@ -18,7 +18,7 @@ class PackageController extends Controller
     public function index()
     {
         $packages = Package::get();
-        return view('backend.package.index', compact('packages'));
+        return view('admin.package.index', compact('packages'));
     }
 
     /**
@@ -28,7 +28,7 @@ class PackageController extends Controller
      */
     public function create()
     {
-        return view('backend.package.create');
+        return view('admin.package.create');
     }
 
     /**
@@ -88,7 +88,7 @@ class PackageController extends Controller
         // return $services;
 
 
-        return view('backend.package.edit', compact('package', 'services'));
+        return view('admin.package.edit', compact('package', 'services'));
     }
 
     /**

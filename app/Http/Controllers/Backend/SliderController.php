@@ -19,7 +19,7 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::get();
-        return view('backend.slider.index', compact('sliders'));
+        return view('admin.slider.index', compact('sliders'));
     }
 
     /**
@@ -29,7 +29,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return  view('backend.slider.create');
+        return  view('admin.slider.create');
     }
 
     /**

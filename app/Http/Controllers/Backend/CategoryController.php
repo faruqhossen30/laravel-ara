@@ -18,7 +18,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::get();
-        return view('backend.category.index', compact('categories'));
+        return view('admin.category.index', compact('categories'));
     }
 
     /**
@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.category.create');
+        return view('admin.category.create');
     }
 
     /**
@@ -76,7 +76,7 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::firstWhere('id',$id);
-        return view('backend.category.show', compact('category'));
+        return view('admin.category.show', compact('category'));
     }
 
     /**
@@ -88,7 +88,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::firstWhere('id',$id);
-        return view('backend.category.edit', compact('category'));
+        return view('admin.category.edit', compact('category'));
     }
 
     /**

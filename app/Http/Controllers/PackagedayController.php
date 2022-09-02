@@ -17,7 +17,7 @@ class PackagedayController extends Controller
     public function index()
     {
         $days = PackageDay::get();
-        return view('backend.day.index', compact('days'));
+        return view('admin.day.index', compact('days'));
     }
 
     /**
@@ -27,7 +27,7 @@ class PackagedayController extends Controller
      */
     public function create()
     {
-        return view('backend.day.create');
+        return view('admin.day.create');
     }
 
     /**
@@ -69,7 +69,7 @@ class PackagedayController extends Controller
     public function edit($id)
     {
         $day = PackageDay::firstWhere('id', $id);
-        return view('backend.day.edit');
+        return view('admin.day.edit');
     }
 
     /**

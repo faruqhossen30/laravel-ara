@@ -19,7 +19,7 @@ class FaqController extends Controller
     public function index()
     {
         $faqs = Faq::get();
-        return view('backend.faq.index', compact('faqs'));
+        return view('admin.faq.index', compact('faqs'));
     }
 
     /**
@@ -30,7 +30,7 @@ class FaqController extends Controller
     public function create()
     {
         $faqs = Faq::get();
-        return view('backend.faq.create',compact('faqs'));
+        return view('admin.faq.create',compact('faqs'));
     }
 
     /**
@@ -60,7 +60,7 @@ class FaqController extends Controller
     public function show($id)
     {
         $faq = Faq::firstWhere('id',$id);
-        return view('backend.faq.show', compact('faq'));
+        return view('admin.faq.show', compact('faq'));
     }
 
     /**
@@ -73,7 +73,7 @@ class FaqController extends Controller
     {
         $faq = Faq::firstWhere('id',$id);
 
-        return view('backend.faq.edit', compact('faq'));
+        return view('admin.faq.edit', compact('faq'));
     }
 
     /**

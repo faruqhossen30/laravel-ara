@@ -18,7 +18,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::get();
-        return view('backend.blog.index', compact('blogs'));
+        return view('admin.blog.index', compact('blogs'));
     }
 
     /**
@@ -29,7 +29,7 @@ class BlogController extends Controller
     public function create()
     {
         $categories = Category::get();
-        return view('backend.blog.create',compact('categories'));
+        return view('admin.blog.create',compact('categories'));
     }
 
     /**
@@ -87,7 +87,7 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::firstWhere('id',$id);
-        return view('backend.blog.show', compact('blog'));
+        return view('admin.blog.show', compact('blog'));
     }
 
     /**
@@ -100,7 +100,7 @@ class BlogController extends Controller
     {
         $blog = Blog::firstWhere('id',$id);
         $categories = Category::get();
-        return view('backend.blog.edit', compact('blog','categories'));
+        return view('admin.blog.edit', compact('blog','categories'));
     }
 
     /**
