@@ -85,6 +85,9 @@
                     </div>
                 </div>
             </div> --}}
+            <div>
+                {{$packages->links()}}
+            </div>
         </div>
         <div class="text-center pt-4">
             <a href="#" class="button_1 button_2">All Package</a>

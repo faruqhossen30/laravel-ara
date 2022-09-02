@@ -11,7 +11,7 @@ class PackagepageController extends Controller
 {
     public function index()
     {
-        $packages = Package::with('services')->get();
+        $packages = Package::with('services')->paginate(15);
         // return $packages;
         return view('frontend.package-page', compact('packages'));
     }

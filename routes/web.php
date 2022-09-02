@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogpageController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PackagepageController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\User\UserdashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +29,8 @@ Route::get('pay', [PaymentController::class, 'pay'])->name('pay')->middleware('a
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
+    Route::get('dashboard', [UserdashboardController::class, 'index'])->name('userdashboard');
+});
 
