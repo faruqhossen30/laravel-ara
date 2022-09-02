@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogpageController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PackagepageController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,8 @@ Route::get('/packages', [PackagepageController::class, 'index'])->name('packagep
 Route::get('/package/{id}', [PackagepageController::class, 'singlePackage'])->name('singlepackage');
 Route::get('/blogs', [BlogpageController::class, 'index'])->name('blogpage');
 Route::get('/blog/{id}', [BlogpageController::class, 'singleblog'])->name('singleblog');
+
+Route::get('pay', [PaymentController::class, 'pay'])->name('pay')->middleware('auth');
 
 
 

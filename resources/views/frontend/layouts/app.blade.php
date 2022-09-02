@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/responsive.css">
 
     <script src="{{ asset('frontend') }}/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    @paddleJS
 </head>
 
 <body data-spy="scroll" data-target="#navmenu" data-offset="70">
@@ -136,15 +137,12 @@
     <script src="{{ asset('frontend') }}/js/vendor/venobox.min.js"></script>
     <!-- Ajaxchimp JS -->
     <script src="{{ asset('frontend') }}/js/vendor/jquery.ajaxchimp.min.js"></script>
-    <!-- Particle JS -->
-    <script src="{{ asset('frontend') }}/js/vendor/particles.min.js"></script>
-    <!-- App JS -->
-    <script src="{{ asset('frontend') }}/js/vendor/app.js"></script>
+
     <!-- Wow JS -->
     <script src="{{ asset('frontend') }}/js/vendor/wow.min.js"></script>
     <!-- Main JS -->
     <script src="{{ asset('frontend') }}/js/main.js"></script>
-
+    @stack('script')
 </body>
 
 </html>

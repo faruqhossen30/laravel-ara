@@ -14,6 +14,7 @@
             <div class="hero_mockup d-none d-md-block"></div>
         </div>
     </div>
+
 </section><!-- Hero Section -->
 
 <section id="about" class="promo_section padding">
@@ -351,3 +352,10 @@
     </div>
 </section><!-- Blog Section -->
 @endsection
+@push('script')
+    <!-- App JS -->
+    <script src="{{ asset('frontend') }}/js/vendor/app.js"></script>
+    <!-- Particle JS -->
+    <script src="{{ asset('frontend') }}/js/vendor/particles.min.js"></script>
+
+@endpush
