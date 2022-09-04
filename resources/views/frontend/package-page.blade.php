@@ -11,16 +11,16 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1" class="">Delivery Time: </label>
                     <select name="day" class="form-control mx-2" id="exampleFormControlSelect1">
-                        <option selected>Select</option>
+                        <option selected value="">Select</option>
                         <option value="1">1 Day</option>
-                        <option value="5">5 Day</option>
-                        <option value="7">7 Day</option>
+                        <option value="2">2 Day</option>
+                        <option value="3">3 Day</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1" class="">Service Type: </label>
                     <select name="type" class="form-control mx-2" id="exampleFormControlSelect1">
-                        <option selected>Select</option>
+                        <option selected value="">Select</option>
                         <option value="install">Install only</option>
                         <option value="review">Review only</option>
                     </select>
@@ -36,7 +36,8 @@
                     <div class="pricing_head ">
                         <h4>{{$package->name}}</h4>
                         <h3>${{$package->price}}</h3>
-                        <h5>7/24 Support</h5>
+                        <h5>{{$package->day}} Days Delivery</h5>
+                        {{-- <h5>7/24 Support</h5> --}}
                     </div>
                     <ul class="text-left px-4">
                         @foreach ($package->services as $service)
@@ -52,9 +53,6 @@
             <div>
                 {{$packages->links()}}
             </div>
-        </div>
-        <div class="text-center pt-4">
-            <a href="#" class="button_1 button_2">All Package</a>
         </div>
     </div>
 </section><!-- Pricing Section -->

@@ -1,7 +1,7 @@
 <nav class="sidebar">
   <div class="sidebar-header">
     <a href="{{route('dashboard')}}" class="sidebar-brand">
-      Noble<span>UI</span>
+      Admin<span>UI</span>
     </a>
     <div class="sidebar-toggler not-active">
       <span></span>
@@ -50,9 +50,6 @@
       <ul class="nav sub-menu">
         <li class="nav-item">
           <a href="{{ route('package.index') }}" class="nav-link {{ active_class(['email/inbox']) }}">All Package</a>
-        </li>
-        <li class="nav-item">
-          <a href="{{ route('day.index') }}" class="nav-link {{ active_class(['email/inbox']) }}">Day</a>
         </li>
       </ul>
     </div>

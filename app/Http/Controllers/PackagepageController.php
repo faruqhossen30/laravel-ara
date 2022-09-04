@@ -23,6 +23,12 @@ class PackagepageController extends Controller
 
 
         $packages = Package::with('services')
+            ->when($day, function($query, $day){
+                return $query->where('day', $day);
+            })
+            ->when($type, function($query, $type){
+                return $query->where('type', $type);
+            })
             ->paginate(15);
         // return $packages;
         return view('frontend.package-page', compact('packages'));

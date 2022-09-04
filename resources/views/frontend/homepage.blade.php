@@ -192,7 +192,7 @@
             </div>
         </div>
         <div class="text-center pt-4">
-            <a href="#" class="button_1 button_2">All Package</a>
+            <a href="{{route('packagepage')}}" class="button_1 button_2">All Package</a>
         </div>
     </div>
 </section><!-- Pricing Section -->
