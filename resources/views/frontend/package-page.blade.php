@@ -10,7 +10,7 @@
             <form action="" class="form-inline" method="GET">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1" class="">Delivery Time: </label>
-                    <select name="day" class="form-control mx-2" id="exampleFormControlSelect1">
+                    <select name="day" class="form-control" id="exampleFormControlSelect1">
                         <option selected value="">Select</option>
                         <option value="1">1 Day</option>
                         <option value="2">2 Day</option>
@@ -19,14 +19,14 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1" class="">Service Type: </label>
-                    <select name="type" class="form-control mx-2" id="exampleFormControlSelect1">
-                        <option selected value="">Select</option>
-                        <option value="install">Install only</option>
+                    <select name="type" class="form-control" id="exampleFormControlSelect1">
+                        <option value="">Select</option>
+                        <option value="install" >Install only</option>
                         <option value="review">Review only</option>
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary my-2">Filter</button>
+                <button type="submit" class="btn button_1 btn-sm mx-2" style="line-height: 40px">Filter</button>
             </form>
         </div>
         <div class="row pricing_list">
@@ -51,7 +51,7 @@
             </div>
             @endforeach
             <div>
-                {{$packages->links()}}
+                {{$packages->appends($_GET)->links()}}
             </div>
         </div>
     </div>
