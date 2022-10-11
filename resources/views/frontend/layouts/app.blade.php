@@ -46,7 +46,7 @@
     @paddleJS
 </head>
 
-<body data-spy="scroll" data-target="#navmenu" data-offset="70">
+<body data-spy="scroll" data-target="#navmenu" data-offset="70" class="loaded">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -60,7 +60,7 @@
     <header id="header" class="header_section">
         <div class="container">
             <nav class="navbar">
-                <a href="{{ route('homepage') }}" class="navbar-brand"><img src="{{ asset('frontend') }}/img/logo.png" alt="Xoom"></a>
+                <a href="{{ route('homepage') }}" class="navbar-brand"><img src="{{ asset('frontend') }}/img/apps-promotion.png" alt="Xoom"></a>
                 <div class="d-flex menu-wrap">
                     <div id="navmenu" class="mainmenu">
                         <ul class="nav">

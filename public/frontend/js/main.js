@@ -1,15 +1,15 @@
 /* Xoom Theme Scripts */
 
 (function($){ "use strict";
-             
-    $(window).on('load', function() {
-        $('body').addClass('loaded');
-    });
 
-             
+    // $(window).on('load', function() {
+    //     $('body').addClass('loaded');
+    // });
+
+
 /*=========================================================================
 	Sticky Header
-=========================================================================*/ 
+=========================================================================*/
 	$(function() {
 		var header = $("#header"),
 			yOffset = 0,
@@ -28,16 +28,16 @@
 
 /*=========================================================================
         Mobile Menu
-=========================================================================*/  
+=========================================================================*/
     $('.menu-wrap ul.nav').slicknav({
         prependTo: '.header_section .navbar',
         label: '',
         allowParentLinks: true
     });
-             
+
 /*=========================================================================
         ScreenShot Carousel
-=========================================================================*/       
+=========================================================================*/
 
         function getSlide() {
             var wW = $(window).width();
@@ -46,9 +46,9 @@
             }
             return 3;
         }
-      
+
         var mySwiper = $('.screen_carousel').swiper({
-      
+
             mode:'horizontal',
             loop: true,
             speed: 1000,
@@ -68,7 +68,7 @@
                 modifier: 1,
                 slideShadows : true
             }
-        });             
+        });
 
 /*=========================================================================
 	Counter Up Active
@@ -106,7 +106,7 @@
 		    }
 		}
     });
-             
+
 /*=========================================================================
 	Initialize smoothscroll plugin
 =========================================================================*/
@@ -121,11 +121,11 @@
 	vbSelector.venobox({
 		numeratio: true,
 		infinigall: true
-	}); 
-				 
+	});
+
 /*=========================================================================
 	Scroll To Top
-=========================================================================*/ 
+=========================================================================*/
     $(window).on( 'scroll', function () {
         if ($(this).scrollTop() > 100) {
             $('#scroll-to-top').fadeIn();
@@ -136,19 +136,19 @@
 
 /*=========================================================================
 	WOW Active
-=========================================================================*/ 
+=========================================================================*/
    new WOW().init();
-             
+
 /*=========================================================================
 	MAILCHIMP
-=========================================================================*/ 
+=========================================================================*/
 
     if ($('.subscribe_form').length>0) {
         /*  MAILCHIMP  */
         $('.subscribe_form').ajaxChimp({
             language: 'es',
             callback: mailchimpCallback,
-            url: "//alexatheme.us14.list-manage.com/subscribe/post?u=48e55a88ece7641124b31a029&amp;id=361ec5b369" 
+            url: "//alexatheme.us14.list-manage.com/subscribe/post?u=48e55a88ece7641124b31a029&amp;id=361ec5b369"
         });
     }
 
@@ -171,8 +171,8 @@
         3: 'The domain portion of the email address is invalid (the portion after the @: )',
         4: 'The username portion of the email address is invalid (the portion before the @: )',
         5: 'This email address looks fake or invalid. Please enter a real email address'
-    };   
-             
+    };
+
 
 
 })(jQuery);
