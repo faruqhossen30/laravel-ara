@@ -65,10 +65,10 @@
                     <div id="navmenu" class="mainmenu">
                         <ul class="nav">
                             <li><a data-scroll class="nav-link active" href="{{ route('homepage') }}">Home <span class="sr-only">(current)</span></a></li>
-                            <li><a data-scroll class="nav-link" href="#about">About</a></li>
+                            {{-- <li><a data-scroll class="nav-link" href="#about">About</a></li> --}}
                             <li><a data-scroll class="nav-link" href="{{ route('packagepage') }}">Package</a></li>
-                            <li><a data-scroll class="nav-link" href="#features">Features</a></li>
-                            <li><a data-scroll class="nav-link" href="#pricing">Pricing</a></li>
+                            {{-- <li><a data-scroll class="nav-link" href="#features">Features</a></li> --}}
+                            {{-- <li><a data-scroll class="nav-link" href="#pricing">Pricing</a></li> --}}
                             <li><a data-scroll class="nav-link" href="{{route('blogpage')}}">Blog</a></li>
                             @auth
                             <li class="nav-item ">
