@@ -137,10 +137,12 @@
     <script src="{{ asset('frontend') }}/js/vendor/venobox.min.js"></script>
     <!-- Ajaxchimp JS -->
     <script src="{{ asset('frontend') }}/js/vendor/jquery.ajaxchimp.min.js"></script>
+    @stack('script')
 
     <!-- Wow JS -->
     <script src="{{ asset('frontend') }}/js/vendor/wow.min.js"></script>
     <!-- Main JS -->
+    <script src="{{ asset('frontend') }}/js/main.js"></script>
     @stack('script')
 </body>
 
