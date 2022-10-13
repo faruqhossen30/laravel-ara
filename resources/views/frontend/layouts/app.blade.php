@@ -60,7 +60,7 @@
     <header id="header" class="header_section">
         <div class="container">
             <nav class="navbar">
-                <a href="{{ route('homepage') }}" class="navbar-brand"><img src="{{ asset('frontend') }}/img/apps-promotion.png" alt="Xoom"></a>
+                <a href="{{ route('homepage') }}" class="navbar-brand"><img src="{{ asset('frontend') }}/img/logo.png" alt="app promotion"></a>
                 <div class="d-flex menu-wrap">
                     <div id="navmenu" class="mainmenu">
                         <ul class="nav">
@@ -141,7 +141,6 @@
     <!-- Wow JS -->
     <script src="{{ asset('frontend') }}/js/vendor/wow.min.js"></script>
     <!-- Main JS -->
-    <script src="{{ asset('frontend') }}/js/main.js"></script>
     @stack('script')
 </body>
 

@@ -8,7 +8,10 @@
                 <div class="hero_content">
                     <h1>Showcase your app <br> with xoom</h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> It has survived not only five centuries.</p>
-                    <a href="#" class="button_1 button_2">Download Now</a>
+                </div>
+                <div class="btn_group">
+                    <a href="#" class="download_btn"><i class="fa fa-android"></i><span>Get impration</span>Android Apps</a>
+                    <a href="#" class="download_btn"><i class="fa fa-money" aria-hidden="true"></i><span>Start from</span>$10</a>
                 </div>
             </div>
             <div class="hero_mockup d-none d-md-block"></div>
@@ -49,7 +52,7 @@
     </div>
 </section><!-- Promo Section -->
 
-<section id="features" class="feature_section padding">
+{{-- <section id="features" class="feature_section padding">
     <div class="container">
         <div class="section_heading mb-40 align-center">
             <h2>Xoom Features</h2>
@@ -100,7 +103,67 @@
             </div>
         </div>
     </div>
+</section><!-- Feature Section --> --}}
+
+
+<section id="features" class="feature_section bg-grey padding">
+    <div class="container">
+        <div class="section_heading mb-40 align-center">
+            <h2>Powerfull Feature</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> It has survived not only five centuries.</p>
+        </div><!-- Section Heading -->
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <ul class="feature_list feature_left">
+                    <li class="feature_content wow fadeInRight" data-wow-delay="0ms" data-wow-duration="800ms">
+                        <i class="icon-mobile"></i>
+                        <h4 class="mb-10">Responsive Design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <span class="circle"></span>
+                    </li>
+                    <li class="feature_content wow fadeInRight" data-wow-delay="200ms" data-wow-duration="800ms">
+                        <i class="icon-browser mb-10"></i>
+                        <h4 class="mb-10">Bootstrap 3.1</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <span class="circle"></span>
+                    </li>
+                    <li class="feature_content wow fadeInRight" data-wow-delay="400ms" data-wow-duration="800ms">
+                        <i class="icon-global"></i>
+                        <h4 class="mb-10">Cross Browser Support</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <span class="circle"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mock-hide">
+                <img class="feature_mockup" src="{{asset('frontend')}}/img/mockup-2.png" alt="Feature">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <ul class="feature_list">
+                    <li class="feature_content wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="800ms">
+                        <i class="icon-hotairballoon"></i>
+                        <h4 class="mb-10">Simple frendly interface</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <span class="circle"></span>
+                    </li>
+                    <li class="feature_content wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="800ms">
+                        <i class="icon-happy"></i>
+                        <h4 class="mb-10">Personalized user support</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <span class="circle"></span>
+                    </li>
+                    <li class="feature_content wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="800ms">
+                        <i class="icon-chat"></i>
+                        <h4 class="mb-10">Great community</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <span class="circle"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section><!-- Feature Section -->
+
 
 <section id="screenshots" class="screenshot_section padding">
     <div class="container">
@@ -353,9 +416,5 @@
 </section><!-- Blog Section -->
 @endsection
 @push('script')
-    <!-- App JS -->
-    <script src="{{ asset('frontend') }}/js/vendor/app.js"></script>
-    <!-- Particle JS -->
-    <script src="{{ asset('frontend') }}/js/vendor/particles.min.js"></script>
 
 @endpush

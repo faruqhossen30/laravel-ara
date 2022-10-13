@@ -1070,3 +1070,107 @@ ul.nav > li > a.active{
   }
 
   /* custom css end  */
+
+
+  /* ==========================================================================
+   Feature Section
+   ========================================================================== */
+.feature_section{
+    padding: 100px 0 55px;
+}
+.feature_list.feature_left{
+    text-align: right;
+}
+.feature_list{
+    padding: 80px 0;
+}
+.feature_list li{
+    position: relative;
+    margin-bottom: 30px;
+}
+.feature_list li i{
+    color: #fff;
+    background: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+    width: 50px;
+	height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 2px;
+    margin-bottom: 8px;
+	position: relative;
+    z-index: 1;
+}
+.feature_content h4{
+    margin-bottom: 5px;
+}
+
+/*Circle Style*/
+.feature_list .circle{
+    width: 100px;
+    height: 2px;
+    background-color: #ddd;
+    position: absolute;
+    left: -110px;
+    top: calc(20% - 1px);
+    z-index: 1;
+}
+.feature_left.feature_list .circle{
+    right: -110px;
+    left: auto;
+}
+
+.feature_list .circle:before{
+    background-color: rgba(115, 108, 245, 0.8);
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: -15px;
+    z-index: 1;
+}
+.feature_left.feature_list .circle:before,
+.feature_left.feature_list .circle:after{
+    right: -30px;
+    left: auto;
+}
+.feature_list .circle:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: -15px;
+    z-index: 1;
+    border: 3px solid #736cf5;
+    -webkit-animation: circle_zoom 0.8s linear 0.4s infinite;
+    animation: circle_zoom 0.8s linear 0.4s infinite;
+}
+
+@-webkit-keyframes circle_zoom {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: .6
+    }
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0
+    }
+}
+
+@keyframes circle_zoom {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: .6
+    }
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0
+    }
+}
