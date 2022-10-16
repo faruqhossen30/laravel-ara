@@ -24,6 +24,6 @@
 
 <footer class="footer_section align-center">
     <div class="container">
-        <p>&copy; 2018 Xoom Powered by WowThemez</p>
+        <p>&copy; 2022 @ Apps Pormotion @</p>
     </div>
 </footer><!-- /.footer_section -->
