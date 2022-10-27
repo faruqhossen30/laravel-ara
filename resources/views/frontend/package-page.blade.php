@@ -4,7 +4,7 @@
     <div class="container">
         <div class="section_heading mb-40 align-center">
             <h2>Popular Package</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> It has survived not only five centuries.</p>
+            <p>Packaging keeps the world organized. Whether it’s a packet for your M&Ms, a hamper for your dirty laundry or the bottle that holds the delicious liquid particles <br>of your beer together, the things we put things in are important!</p>
         </div><!-- Section Heading -->
         <div class="mt-3">
             <form action="" class="form-inline" method="GET">
