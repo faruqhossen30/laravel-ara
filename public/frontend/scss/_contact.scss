@@ -1,9 +1,9 @@
-// 
+//
 // contact.scss
-// 
+//
 
 .contact{
-    padding: 120px 0 76px 0;
+    padding: 100px 0 76px 0;
     .contact-map{
         position: relative;
         z-index: 999;
@@ -18,7 +18,7 @@
         z-index: 1;
         color: $dark;
     }
-    
+
     .custom-form {
         .form-control {
             &:focus {

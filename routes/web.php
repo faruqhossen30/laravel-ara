@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogpageController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PackagepageController;
 use App\Http\Controllers\PaymentController;
@@ -25,6 +26,7 @@ Route::get('/blogs', [BlogpageController::class, 'index'])->name('blogpage');
 Route::get('/blog/{id}', [BlogpageController::class, 'singleblog'])->name('singleblog');
 
 Route::get('pay', [PaymentController::class, 'pay'])->name('pay')->middleware('auth');
+Route::get('contact-us', [ContactController::class, 'index'])->name('contactpage');
 
 
 

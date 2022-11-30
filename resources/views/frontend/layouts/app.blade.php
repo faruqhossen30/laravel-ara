@@ -96,7 +96,7 @@
         <div class="container-fluid">
 
             <!-- LOGO -->
-            <a class="navbar-brand logo text-uppercase"  href="{{asset('frontend')}}/index-1.html">
+            <a class="navbar-brand logo text-uppercase"  href="{{route('homepage')}}">
                 <img src="{{asset('frontend')}}/images/logo-light.png" class="logo-light" alt="" height="30">
                 <img src="{{asset('frontend')}}/images/logo-dark.png" class="logo-dark" alt="" height="30">
             </a>
@@ -109,29 +109,20 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto" id="navbar-navlist">
                     <li class="nav-item">
-                        <a class="nav-link"  href="#home">Home</a>
+                        <a class="nav-link"  href="{{route('homepage')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  href="#about">About Us</a>
+                        <a class="nav-link"  href="{{route('packagepage')}}">Package & Priging</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  href="#features">Features</a>
+                        <a class="nav-link"  href="{{route('blogpage')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  href="#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  href="#app">Application</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  href="#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  href="#contact">Contact</a>
+                        <a class="nav-link"  href="{{route('contactpage')}}">Contact</a>
                     </li>
                 </ul>
                 <div class="ms-auto">
-                    <a  href="javascript: void(0);" class="btn bg-gradiant">Login</a>
+                    <a  href="{{route('login')}}" class="btn bg-gradiant">Login</a>
                 </div>
             </div>
         </div>
@@ -142,6 +133,7 @@
         @yield('content')
     </div>
     <!-- footer section -->
+    <hr>
     @include('frontend.layouts.footer')
     <hr>
     @include('frontend.layouts.footerbottom')

@@ -69,7 +69,7 @@
                 <div class="home-heading">
                     <!-- <h3 class="text-uppercase">Promote Your Apps in Cheap Rate</h3> -->
                     <h4 class="home-title">Promote Your Apps in Cheap Rate</h4>
-                    <h5 class="home text-muted">App Optimization & Store Promotion Services</h5>
+                    <h5 class="text-muted">App Optimization & Store Promotion Services</h5>
                     <ul class="pricing-team pricing-list list-unstyled mt-2 mb-0">
                         <li class="pricing-item h6 text-muted"><i class="uil uil-check-circle text-primary"></i>
                             Rank your app Top for Any Keyword
@@ -112,7 +112,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 d-none d-md-block">
                 <img src="{{asset('frontend')}}/images/home/home1-1.png" alt="" class="img-fluid">
             </div>
         </div>
