@@ -6,6 +6,8 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PackagepageController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\User\UserdashboardController;
+use App\Mail\ContactMe;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,5 +36,21 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     Route::get('dashboard', [UserdashboardController::class, 'index'])->name('userdashboard');
+});
+
+
+Route::get('/contact',function(){
+    return view('frontend.email.contact');
+
+});
+
+Route::post('/contact',function(){
+    // return view('frontend.contact');
+  $data =  request(['name','email','subject','message']);
+//   return $data;
+Mail::to('aminulislammd97@gmail.com')->send(new ContactMe($data));
+
+return redirect()->back()->with('flash','Message Send successfULLY');
+
 });
 
